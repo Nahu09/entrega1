@@ -12,7 +12,7 @@ python -m venv <nombre_carpeta_a_crear>
 ```
 # Iniciar el entorno virtual (Windows)
 ```bash
-./<nombre_de_carpeta>/Scripts/activate
+.\<nombre_de_carpeta>\Scripts\activate
 ```
 
 # migraciones:
