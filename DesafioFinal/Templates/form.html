@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{%block formulario%}
+    <form class="form-subscribe" action="" method="POST" enctype="multipart/form-data">
+        <h1>hola</h1>
+        <!-- Email address input-->
+        {% csrf_token %}
+        <div class="row">
+            <div class="col">
+                {% for field in formulario %}
+                    <div class="form-group">
+                        <label>{{field.label}}</label>
+                        {{field}}
+                    </div>
+                {% endfor %}
+            </div>
+            <button type='submit' class='btn' btn-primary>ENVIAR</button>
+        </div>
+        <!-- Submit success message-->
+        <!---->
+        <!-- This is what your users will see when the form-->
+        <!-- has successfully submitted-->
+        <div class="d-none" id="submitSuccessMessage">
+            <div class="text-center mb-3">
+                <div class="fw-bolder">Form submission successful!</div>
+                <p>To activate this form, sign up at</p>
+                <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+            </div>
+        </div>
+        <!-- Submit error message-->
+        <!---->
+        <!-- This is what your users will see when there is-->
+        <!-- an error submitting the form-->
+        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+    </form>
+{%endblock formulario%}
